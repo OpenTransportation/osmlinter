@@ -1,0 +1,39 @@
+{
+  "name": "osmlinter",
+  "description": "Standalone OSM linting methods written in ES5 Javascript.",
+  "version": "0.1.0",
+  "main": "osmlinter.js",
+  "module": "index.js",
+  "jsnext:main": "index.js",
+  "files": [
+    "index.js",
+    "osmlinter.js",
+    "validators"
+  ],
+  "scripts": {
+    "pretest": "rollup -c rollup.config.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OpenTransportation/osmlinter.git"
+  },
+  "author": "Denis Carriere <@DenisCarriere>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/OpenTransportation/osmlinter/issues"
+  },
+  "homepage": "https://github.com/OpenTransportation/osmlinter",
+  "dependencies": {
+    "@turf/helpers": "*",
+    "@turf/meta": "*"
+  },
+  "devDependencies": {
+    "@types/geojson": "^1.0.3",
+    "glob": "*",
+    "jest": "*",
+    "load-json-file": "*",
+    "rollup": "*",
+    "write-json-file": "*"
+  }
+}
