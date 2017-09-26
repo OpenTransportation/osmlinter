@@ -13,9 +13,10 @@
   ],
   "scripts": {
     "prepublish": "rollup -c rollup.config.js && npm run docs",
+    "lint": "standard",
+    "docs": "documentation readme osmlinter.js --shallow --section=API",
     "pretest": "rollup -f cjs -o osmlinter.js -m inline index.js",
-    "docs": "npm run pretest && documentation readme osmlinter.js --shallow --section=API",
-    "test": "jest --coverage"
+    "test": "tap validators/*/test.js --coverage"
   },
   "repository": {
     "type": "git",
@@ -34,22 +35,16 @@
   },
   "devDependencies": {
     "@types/geojson": "*",
-    "coveralls": "*",
     "documentation": "*",
     "glob": "*",
-    "jest": "*",
     "load-json-file": "*",
     "rollup": "*",
-    "rollup-plugin-commonjs": "*",
     "rollup-plugin-node-resolve": "*",
     "rollup-plugin-uglify": "*",
     "standard": "*",
+    "tap": "*",
+    "tape": "*",
     "typescript": "*",
     "write-json-file": "*"
-  },
-  "standard": {
-    "env": [
-      "jest"
-    ]
   }
 }
