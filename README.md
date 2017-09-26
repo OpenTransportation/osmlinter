@@ -10,13 +10,22 @@
 
 > Advanced OSM linter for node and browsers
 
-## Linters
+## Linters/Validators
 
--   [x] [impossibleAngle](https://github.com/osmlab/osmlint/tree/master/validators/impossibleAngle)
+### Impossible Angle
 
-![image](https://user-images.githubusercontent.com/550895/30848303-c477f67a-a26c-11e7-8a6e-d094367ead71.png)
+> This validator detects lines with less likely turning angles.
 
--   [x] Way end node near other highway. Ways end within a few meters, possibly accidentally unconnected ways (<http://wiki.openstreetmap.org/wiki/JOSM/Validator#Validations>)
+Ref: [osmlint](https://github.com/osmlab/osmlint) - [`impossibleAngle`](https://github.com/osmlab/osmlint/tree/master/validators/impossibleAngle)
+
+![image](https://user-images.githubusercontent.com/550895/30848724-02518014-a26e-11e7-806f-7783a588bb34.png)
+
+## Closest End Nodes
+
+> This validator detects if a line has ending nodes closer to other lines.
+> End Nodes touching lines are ignored.
+
+Ref: [JSOM Linter](http://wiki.openstreetmap.org/wiki/JOSM/Validator#Validations) (Way end node near other highway)
 
 ![image](https://user-images.githubusercontent.com/550895/30847759-ac733762-a26a-11e7-94a9-717087a2933b.png)
 
@@ -71,7 +80,7 @@ Impossible Angle, this validator detects lines with less likely turning angles.
 
 **Parameters**
 
--   `lines`
+-   `lines`  
 -   `options` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)?** Optional parameters
     -   `options.threshold` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** Threshold in degrees (optional, default `10`)
 -   `line` **(FeatureCollection | Feature&lt;(LineString | MultiLineString)>)** (Multi)LineString
