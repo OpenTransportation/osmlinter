@@ -18,6 +18,6 @@ function assign (options) {
 
 export default [
   assign({format: 'es', file: 'osmlinter.mjs'}),
-  assign({format: 'umd', file: 'osmlinter.js'}),
+  assign({format: 'cjs', file: 'osmlinter.js'}),
   assign({format: 'umd', file: 'osmlinter.min.js', plugins: [ uglify() ]})
 ]

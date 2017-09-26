@@ -12,8 +12,9 @@
     "osmlinter.min.js"
   ],
   "scripts": {
-    "prepublish": "rollup -c rollup.config.js",
+    "prepublish": "rollup -c rollup.config.js && npm run docs",
     "pretest": "rollup -f cjs -o osmlinter.js index.js",
+    "docs": "npm run pretest && documentation readme osmlinter.js --shallow --section=API",
     "test": "jest"
   },
   "repository": {
@@ -33,6 +34,7 @@
   },
   "devDependencies": {
     "@types/geojson": "*",
+    "documentation": "*",
     "glob": "*",
     "jest": "*",
     "load-json-file": "*",

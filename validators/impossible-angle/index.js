@@ -9,6 +9,12 @@ import { findAngle } from '../utils/index'
  * @param {Object} [options] Optional parameters
  * @param {number} [options.threshold=10] Threshold in degrees
  * @returns {boolean} true/false
+ * @example
+ * const line = {
+ *   type: 'LineString',
+ *   coordinates: [[5, 5], [5, 6], [3, 4]]
+ * }
+ * osmlinter.impossibleAngle(line)
  */
 export default function impossibleAngle (line, options) {
   // Optional Paramters

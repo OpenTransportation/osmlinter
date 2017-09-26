@@ -10,6 +10,9 @@ import { round } from '@turf/helpers'
  * @param {Object} [options] Optional parameters
  * @param {number} [options.precision] Number of precison
  * @return {number} angle
+ * @example
+ * osmlinter.findAngle([5, 5], [5, 6], [3, 4])
+ * //=45
  */
 export function findAngle (startPoint, midPoint, endPoint, options) {
   options = options || {}
