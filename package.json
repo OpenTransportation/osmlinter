@@ -34,6 +34,7 @@
   },
   "devDependencies": {
     "@types/geojson": "*",
+    "coveralls": "*",
     "documentation": "*",
     "glob": "*",
     "jest": "*",
