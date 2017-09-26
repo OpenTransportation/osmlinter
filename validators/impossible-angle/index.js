@@ -31,7 +31,7 @@ export default function impossibleAngle (line, options) {
     var midPoint = getCoords(currentSegment)[0]
     var endPoint = getCoords(currentSegment)[1]
 
-    if (findAngle(startPoint, midPoint, endPoint) < threshold) isImpossible = true
+    if (findAngle(startPoint, midPoint, endPoint) > threshold) isImpossible = true
     return currentSegment
   })
   return isImpossible

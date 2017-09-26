@@ -10,14 +10,12 @@ function assign (options) {
       format: options.format || 'umd',
       name: 'osmlinter'
     },
-    plugins: [
-      nodeResolve()
-    ].concat(options.plugins || [])
+    plugins: [nodeResolve()].concat(options.plugins || [])
   }
 }
 
 export default [
   assign({format: 'es', file: 'osmlinter.mjs'}),
   assign({format: 'cjs', file: 'osmlinter.js'}),
-  assign({format: 'umd', file: 'osmlinter.min.js', plugins: [ uglify() ]})
+  assign({format: 'umd', file: 'osmlinter.min.js', plugins: [uglify()]})
 ]
