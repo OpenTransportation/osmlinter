@@ -21,13 +21,11 @@ export default function impossibleAngle (line, options) {
   // Main
   var isImpossible = false
   segmentReduce(line, function (previousSegment, currentSegment, featureIndex, featureSubIndex, segmentIndex) {
-    var previousCoords = getCoords(previousSegment)
-    var currentCoords = getCoords(currentSegment)
+    var startPoint = getCoords(previousSegment)[0]
+    var midPoint = getCoords(currentSegment)[0]
+    var endPoint = getCoords(currentSegment)[1]
 
-    var A = previousCoords[0]
-    var B = currentCoords[0]
-    var C = currentCoords[1]
-    if (findAngle(A, B, C) < threshold) isImpossible = true
+    if (findAngle(startPoint, midPoint, endPoint) < threshold) isImpossible = true
     return currentSegment
   })
   return isImpossible

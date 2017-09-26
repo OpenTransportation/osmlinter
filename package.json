@@ -12,7 +12,8 @@
     "osmlinter.min.js"
   ],
   "scripts": {
-    "pretest": "rollup -c rollup.config.js",
+    "prepublish": "rollup -c rollup.config.js",
+    "pretest": "rollup -f cjs -o osmlinter.js index.js",
     "test": "jest"
   },
   "repository": {
