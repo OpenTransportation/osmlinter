@@ -4,12 +4,12 @@
   "version": "0.1.0",
   "main": "osmlinter.js",
   "types": "index.d.ts",
-  "module": "index.js",
-  "jsnext:main": "index.js",
+  "module": "osmlinter.mjs",
+  "jsnext:main": "osmlinter.mjs",
   "files": [
-    "index.js",
     "osmlinter.js",
-    "validators"
+    "osmlinter.mjs",
+    "osmlinter.min.js"
   ],
   "scripts": {
     "pretest": "rollup -c rollup.config.js",
@@ -26,9 +26,9 @@
   },
   "homepage": "https://github.com/OpenTransportation/osmlinter",
   "dependencies": {
-    "@turf/helpers": "*",
-    "@turf/invariant": "*",
-    "@turf/meta": "*"
+    "@turf/helpers": "5.0.0-alpha",
+    "@turf/invariant": "5.0.0-alpha",
+    "@turf/meta": "5.0.0-alpha"
   },
   "devDependencies": {
     "@types/geojson": "*",
@@ -36,13 +36,16 @@
     "jest": "*",
     "load-json-file": "*",
     "rollup": "*",
+    "rollup-plugin-commonjs": "*",
+    "rollup-plugin-node-resolve": "*",
+    "rollup-plugin-uglify": "*",
     "standard": "*",
     "typescript": "*",
     "write-json-file": "*"
   },
   "standard": {
     "env": [
-       "jest"
+      "jest"
     ]
   }
 }

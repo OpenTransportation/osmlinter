@@ -10,7 +10,7 @@ import { findAngle } from '../utils/index'
  * @param {number} [options.threshold=10] Threshold in degrees
  * @returns {boolean} true/false
  */
-export default function (line, options) {
+export default function impossibleAngle (line, options) {
   // Optional Paramters
   options = options || {}
   var threshold = (options.threshold !== undefined) ? options.threshold : 10

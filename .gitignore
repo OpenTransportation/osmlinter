@@ -1,5 +1,7 @@
 dist
 osmlinter.js
+osmlinter.min.js
+osmlinter.mjs
 
 # Logs
 logs
