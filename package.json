@@ -3,6 +3,7 @@
   "description": "Standalone OSM linting methods written in ES5 Javascript.",
   "version": "0.1.0",
   "main": "osmlinter.js",
+  "types": "index.d.ts",
   "module": "index.js",
   "jsnext:main": "index.js",
   "files": [
@@ -26,6 +27,7 @@
   "homepage": "https://github.com/OpenTransportation/osmlinter",
   "dependencies": {
     "@turf/helpers": "*",
+    "@turf/invariant": "*",
     "@turf/meta": "*"
   },
   "devDependencies": {
@@ -34,6 +36,13 @@
     "jest": "*",
     "load-json-file": "*",
     "rollup": "*",
+    "standard": "*",
+    "typescript": "*",
     "write-json-file": "*"
+  },
+  "standard": {
+    "env": [
+       "jest"
+    ]
   }
 }
