@@ -15,7 +15,7 @@
     "prepublish": "rollup -c rollup.config.js",
     "lint": "standard",
     "docs": "npm run prepublish && documentation readme osmlinter.js --shallow --section=API",
-    "pretest": "rollup -f cjs -o osmlinter.js index.js",
+    "pretest": "rollup -f cjs -o osmlinter.js index.js && node ./scripts/convert-osm2geojson.js",
     "test": "tap validators/*/test.js --coverage",
     "bench": "node bench.js"
   },
@@ -32,7 +32,8 @@
   "dependencies": {
     "@turf/helpers": "5.0.0-alpha",
     "@turf/invariant": "5.0.0-alpha",
-    "@turf/meta": "5.0.0-alpha"
+    "@turf/meta": "5.0.0-alpha",
+    "@turf/point-to-line-distance": "^4.7.3"
   },
   "devDependencies": {
     "@types/geojson": "*",
@@ -40,13 +41,18 @@
     "documentation": "*",
     "glob": "*",
     "load-json-file": "*",
+    "osm-and-geojson": "^0.1.2",
+    "osmium": "*",
     "rollup": "*",
+    "rollup-plugin-commonjs": "^8.2.1",
     "rollup-plugin-node-resolve": "*",
     "rollup-plugin-uglify": "*",
     "standard": "*",
     "tap": "*",
     "tape": "*",
     "typescript": "*",
-    "write-json-file": "*"
+    "underscore": "*",
+    "write-json-file": "*",
+    "xmldom": "^0.1.27"
   }
 }

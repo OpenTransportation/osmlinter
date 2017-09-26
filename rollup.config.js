@@ -1,4 +1,5 @@
 import nodeResolve from 'rollup-plugin-node-resolve'
+import commonjs from 'rollup-plugin-commonjs'
 import uglify from 'rollup-plugin-uglify'
 
 function assign (options) {
@@ -10,7 +11,10 @@ function assign (options) {
       format: options.format || 'umd',
       name: 'osmlinter'
     },
-    plugins: [nodeResolve()].concat(options.plugins || [])
+    plugins: [
+      nodeResolve({ module: true, jsnext: true }),
+      commonjs({include: 'node_modules/**'})
+    ].concat(options.plugins || [])
   }
 }
 
