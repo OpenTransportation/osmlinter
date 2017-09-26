@@ -1,6 +1,6 @@
 {
   "name": "osmlinter",
-  "description": "Standalone OSM linting methods written in ES5 Javascript.",
+  "description": "Advanced OSM linter for node and browsers",
   "version": "0.1.0",
   "main": "osmlinter.js",
   "types": "index.d.ts",

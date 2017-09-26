@@ -1,18 +1,18 @@
 import nodeResolve from 'rollup-plugin-node-resolve'
 import uglify from 'rollup-plugin-uglify'
 
-function assign ({file, format, plugins}) {
+function assign (options) {
   return {
     input: 'index.js',
     output: {
       extend: true,
-      file,
-      format: format || 'umd',
+      file: options.file,
+      format: options.format || 'umd',
       name: 'osmlinter'
     },
     plugins: [
       nodeResolve()
-    ].concat(plugins || [])
+    ].concat(options.plugins || [])
   }
 }
 

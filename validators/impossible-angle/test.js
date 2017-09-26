@@ -1,7 +1,7 @@
 const path = require('path')
 const glob = require('glob')
 const load = require('load-json-file')
-const { impossibleAngle } = require('../..')
+const impossibleAngle = require('../..').impossibleAngle
 
 test('impossible-angle', () => {
   // True
