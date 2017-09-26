@@ -8,6 +8,13 @@
   dependencies:
     "@turf/invariant" "^4.7.3"
 
+"@turf/circle@^4.7.3":
+  version "4.7.3"
+  resolved "https://registry.yarnpkg.com/@turf/circle/-/circle-4.7.3.tgz#e8f996ff87b0ca8e3e6b74b60f6ab5daf9086713"
+  dependencies:
+    "@turf/destination" "^4.7.3"
+    "@turf/helpers" "^4.7.3"
+
 "@turf/destination@^4.7.3":
   version "4.7.3"
   resolved "https://registry.yarnpkg.com/@turf/destination/-/destination-4.7.3.tgz#f1ea3bb3705cf52fed135a7917d49336e47b8d2e"
