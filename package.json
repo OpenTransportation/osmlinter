@@ -12,11 +12,12 @@
     "osmlinter.min.js"
   ],
   "scripts": {
-    "prepublish": "rollup -c rollup.config.js && npm run docs",
+    "prepublish": "rollup -c rollup.config.js",
     "lint": "standard",
-    "docs": "documentation readme osmlinter.js --shallow --section=API",
-    "pretest": "rollup -f cjs -o osmlinter.js -m inline index.js",
-    "test": "tap validators/*/test.js --coverage"
+    "docs": "npm run prepublish && documentation readme osmlinter.js --shallow --section=API",
+    "pretest": "rollup -f cjs -o osmlinter.js index.js",
+    "test": "tap validators/*/test.js --coverage",
+    "bench": "node bench.js"
   },
   "repository": {
     "type": "git",
@@ -35,6 +36,7 @@
   },
   "devDependencies": {
     "@types/geojson": "*",
+    "benchmark": "*",
     "documentation": "*",
     "glob": "*",
     "load-json-file": "*",
