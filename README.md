@@ -1,9 +1,9 @@
 # OSM Linter
 
-[![Build Status](https://travis-ci.org/OpenTransportation/osmlinter.svg?branch=master)](https://travis-ci.org/OpenTransportation/osmlinter)
+[![Build Status](https://travis-ci.org/opentransportation/osmlinter.svg?branch=master)](https://travis-ci.org/opentransportation/osmlinter)
 [![npm version](https://badge.fury.io/js/osmlinter.svg)](https://badge.fury.io/js/osmlinter)
-[![Coverage Status](https://coveralls.io/repos/github/OpenTransportation/osmlinter/badge.svg?branch=master)](https://coveralls.io/github/OpenTransportation/osmlinter?branch=master)
-[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/OpenTransportation/osmlinter/master/LICENSE)
+[![Coverage Status](https://coveralls.io/repos/github/opentransportation/osmlinter/badge.svg?branch=master)](https://coveralls.io/github/opentransportation/osmlinter?branch=master)
+[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/opentransportation/osmlinter/master/LICENSE)
 [![ES5](https://camo.githubusercontent.com/d341caa63123c99b79fda7f8efdc29b35f9f2e70/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f65732d352d627269676874677265656e2e737667)](http://kangax.github.io/compat-table/es5/)
 
 [![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
@@ -13,7 +13,12 @@
 ## Linters
 
 -   [ ] [impossibleAngle](https://github.com/osmlab/osmlint/tree/master/validators/impossibleAngle)
+
+![image](https://user-images.githubusercontent.com/550895/30848303-c477f67a-a26c-11e7-8a6e-d094367ead71.png)
+
 -   [ ] Way end node near other highway. Ways end within a few meters, possibly accidentally unconnected ways (<http://wiki.openstreetmap.org/wiki/JOSM/Validator#Validations>)
+
+![image](https://user-images.githubusercontent.com/550895/30847759-ac733762-a26a-11e7-94a9-717087a2933b.png)
 
 ## Install
 
@@ -519,7 +524,7 @@ Type: [Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Referen
 -   `featureSubIndex` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** The featureSubIndex currently being processed, starts at index 0.
 -   `segmentIndex` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** The segmentIndex currently being processed, starts at index 0.
 
-Returns **void** 
+Returns **void**
 
 ### flattenReduceCallback
 
@@ -580,7 +585,7 @@ turf.segmentEach(polygon, function () {
 });
 ```
 
-Returns **void** 
+Returns **void**
 
 ### segmentReduceCallback
 
@@ -644,7 +649,7 @@ var total = turf.segmentReduce(polygon, function (previousValue) {
 }, initialValue);
 ```
 
-Returns **void** 
+Returns **void**
 
 ### feature
 
@@ -897,8 +902,8 @@ Get Geometry from Feature or Geometry Object
 
 **Parameters**
 
--   `num`  
--   `precision`  
+-   `num`
+-   `precision`
 -   `geojson` **(Feature | Geometry)** GeoJSON Feature or Geometry Object
 
 **Examples**
@@ -926,8 +931,8 @@ Get Geometry Type from Feature or Geometry Object
 
 **Parameters**
 
--   `num`  
--   `precision`  
+-   `num`
+-   `precision`
 
 
 -   Throws **[Error](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error)** **DEPRECATED** in v5.0.0 in favor of getType
@@ -938,8 +943,8 @@ Get GeoJSON object's type, Geometry type is prioritize.
 
 **Parameters**
 
--   `num`  
--   `precision`  
+-   `num`
+-   `precision`
 -   `geojson` **GeoJSON** GeoJSON object
 -   `name` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)?** name of the variable to display in error message
 
@@ -1258,10 +1263,10 @@ Valid units: miles, nauticalmiles, inches, yards, meters, metres, kilometers, ce
 
 **Parameters**
 
--   `startPoint`  
--   `midPoint`  
--   `endPoint`  
--   `options`  
+-   `startPoint`
+-   `midPoint`
+-   `endPoint`
+-   `options`
 -   `distance` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** to be converted
 -   `originalUnit` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** of the distance
 -   `finalUnit` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** returned unit (optional, default `kilometers`)
@@ -1275,10 +1280,10 @@ Valid units: kilometers, kilometres, meters, metres, centimetres, millimeter, ac
 
 **Parameters**
 
--   `startPoint`  
--   `midPoint`  
--   `endPoint`  
--   `options`  
+-   `startPoint`
+-   `midPoint`
+-   `endPoint`
+-   `options`
 -   `area` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** to be converted
 -   `originalUnit` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** of the distance (optional, default `meters`)
 -   `finalUnit` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** returned unit (optional, default `kilometers`)
@@ -1291,10 +1296,10 @@ isNumber
 
 **Parameters**
 
--   `startPoint`  
--   `midPoint`  
--   `endPoint`  
--   `options`  
+-   `startPoint`
+-   `midPoint`
+-   `endPoint`
+-   `options`
 -   `num` **any** Number to validate
 
 **Examples**

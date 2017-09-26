@@ -20,7 +20,7 @@ export function findAngle<T extends Point>(
  * Impossible Angle, this validator detects lines with less likely turning angles.
  */
 export function impossibleAngle<T extends LineString>(
-    line: GeoJSON.Feature<T> | T,
+    line: GeoJSON.FeatureCollection<T> | GeoJSON.Feature<T> | T,
     options?: {
         threshold?: number
     }
