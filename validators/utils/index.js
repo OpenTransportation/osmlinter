@@ -4,6 +4,7 @@ import { round } from '@turf/helpers'
 /**
  * Finds the angle between 3 points.
  *
+ * @private
  * @param {number[]} startPoint Start Point Coordiantes
  * @param {number[]} midPoint Mid Point Coordinates
  * @param {number[]} endPoint End Point Coordinates

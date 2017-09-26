@@ -11,7 +11,7 @@ var pointOnLine = require('@turf/point-on-line')
  *
  * JSOM Linter (Way end node near other highway)
  *
- * @param {FeatureCollection|Feature<LineString|MultiLineString>} lines (Multi)LineString(s)
+ * @param {FeatureCollection|Feature<LineString|MultiLineString>} lines GeoJSON (Multi)LineString(s)
  * @param {Object} [options] Optional parameters
  * @param {number} [options.maxDistance=7.5] Maximum distance a node is allowed from lines
  * @param {number} [options.units="meters"] Measured distance units (kilometers, meters, miles)

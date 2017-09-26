@@ -5,7 +5,7 @@ import { findAngle } from '../utils/index'
 /**
  * Impossible Angle, this validator detects lines with less likely turning angles.
  *
- * @param {FeatureCollection|Feature<LineString|MultiLineString>} line (Multi)LineString
+ * @param {FeatureCollection|Feature<LineString|MultiLineString>} lines GeoJSON (Multi)LineString(s)
  * @param {Object} [options] Optional parameters
  * @param {number} [options.threshold=10] Threshold in degrees
  * @returns {boolean} true/false
