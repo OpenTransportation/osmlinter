@@ -3,6 +3,7 @@ const path = require('path')
 const glob = require('glob')
 const load = require('load-json-file')
 const write = require('write-json-file')
+const truncate = require('@turf/truncate')
 const featureEach = require('@turf/meta').featureEach
 const lineString = require('@turf/helpers').lineString
 const featureCollection = require('@turf/helpers').featureCollection
@@ -18,6 +19,8 @@ test('impossible-angle', t => {
       if (isImpossible) feature.properties = { stroke: '#F00', 'stroke-width': 5 }
       results.features.push(feature)
     })
+    // Add Results
+    truncate(results, 6, 2, true)
     if (process.env.REGEN) write.sync(outpath, results)
     t.deepEqual(load.sync(outpath), results)
   })

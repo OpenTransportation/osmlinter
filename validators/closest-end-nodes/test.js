@@ -7,6 +7,7 @@ const circle = require('@turf/circle')
 const featureEach = require('@turf/meta').featureEach
 const lineString = require('@turf/helpers').lineString
 const featureCollection = require('@turf/helpers').featureCollection
+const truncate = require('@turf/truncate')
 const closestEndNodes = require('../..').closestEndNodes
 
 test('closestEndNodes', t => {
@@ -25,6 +26,7 @@ test('closestEndNodes', t => {
     })
     // Add existing data
     featureEach(geojson, feature => results.features.push(feature))
+    truncate(results, 6, 2, true)
     if (process.env.REGEN) write.sync(outpath, results)
     t.deepEqual(results, load.sync(outpath))
   })

@@ -39,6 +39,7 @@
   },
   "devDependencies": {
     "@turf/circle": "^4.7.3",
+    "@turf/truncate": "^4.7.3",
     "@types/geojson": "*",
     "benchmark": "*",
     "documentation": "*",
