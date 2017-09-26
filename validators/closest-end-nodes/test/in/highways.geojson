@@ -3,15 +3,16 @@
 	"features": [
 		{
 			"type": "Feature",
-			"id": "way!14184441!8",
+			"id": "way!14184442!4",
 			"properties": {
-				"highway": "residential",
-				"name": "foo",
+				"foot": "permissive",
+				"highway": "footway",
+				"name": "Dupuis",
 				"osm:type": "way",
-				"osm:id": 14184441,
-				"osm:version": 8,
-				"osm:changeset": 46770717,
-				"osm:timestamp": "2017-03-11T19:59:36.000Z",
+				"osm:id": 14184442,
+				"osm:version": 4,
+				"osm:changeset": 25057846,
+				"osm:timestamp": "2014-08-27T18:07:19.000Z",
 				"osm:user": "andrewpmk",
 				"osm:uid": 1679
 			},
@@ -19,20 +20,12 @@
 				"type": "LineString",
 				"coordinates": [
 					[
-						-75.660671,
-						45.4346919
+						-75.661497,
+						45.4360519
 					],
 					[
-						-75.6610639,
-						45.4351917
-					],
-					[
-						-75.6615612,
-						45.4358724
-					],
-					[
-						-75.6616403,
-						45.4360598
+						-75.6611499,
+						45.4356419
 					]
 				]
 			}
@@ -255,6 +248,38 @@
 		},
 		{
 			"type": "Feature",
+			"id": "way!76442550!3",
+			"properties": {
+				"highway": "residential",
+				"lanes": "2",
+				"name": "Dupuis Street",
+				"name:fr": "rue Dupuis",
+				"source": "CanVec 6.0 - NRCan",
+				"surface": "asphalt",
+				"osm:type": "way",
+				"osm:id": 76442550,
+				"osm:version": 3,
+				"osm:changeset": 23358809,
+				"osm:timestamp": "2014-06-30T17:11:19.000Z",
+				"osm:user": "andrewpmk",
+				"osm:uid": 1679
+			},
+			"geometry": {
+				"type": "LineString",
+				"coordinates": [
+					[
+						-75.6607641,
+						45.4351488
+					],
+					[
+						-75.6611499,
+						45.4356419
+					]
+				]
+			}
+		},
+		{
+			"type": "Feature",
 			"id": "way!76451869!10",
 			"properties": {
 				"highway": "tertiary",
@@ -275,16 +300,8 @@
 				"type": "LineString",
 				"coordinates": [
 					[
-						-75.6613037,
-						45.4362281
-					],
-					[
-						-75.6613417,
-						45.436257
-					],
-					[
-						-75.6613667,
-						45.4362945
+						-75.6613406,
+						45.4362562
 					],
 					[
 						-75.6617118,

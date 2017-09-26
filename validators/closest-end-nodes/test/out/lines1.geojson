@@ -4,7 +4,13 @@
 		{
 			"type": "Feature",
 			"properties": {
-				"featureIndex": 1
+				"distance": 1.7274618340678094,
+				"featureIndex": 1,
+				"closestFeatureIndex": 0,
+				"closestPoint": [
+					-75.71486876098497,
+					45.3811027761594
+				]
 			},
 			"geometry": {
 				"type": "Point",

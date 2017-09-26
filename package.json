@@ -33,6 +33,8 @@
     "@turf/helpers": "5.0.0-alpha",
     "@turf/invariant": "5.0.0-alpha",
     "@turf/meta": "5.0.0-alpha",
+    "@turf/nearest-point-to-line": "^4.0.0",
+    "@turf/point-on-line": "^4.7.3",
     "@turf/point-to-line-distance": "^4.7.3"
   },
   "devDependencies": {
