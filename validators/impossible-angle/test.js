@@ -4,10 +4,10 @@ const glob = require('glob')
 const load = require('load-json-file')
 const write = require('write-json-file')
 const truncate = require('@turf/truncate')
-const featureEach = require('@turf/meta').featureEach
-const lineString = require('@turf/helpers').lineString
-const featureCollection = require('@turf/helpers').featureCollection
-const impossibleAngle = require('../..').impossibleAngle
+const { featureEach } = require('@turf/meta')
+const { lineString } = require('@turf/helpers')
+const { featureCollection } = require('@turf/helpers')
+const impossibleAngle = require('./')
 
 test('impossible-angle', t => {
   glob.sync(path.join(__dirname, 'test', 'in', '*.geojson')).forEach(filepath => {

@@ -1,5 +1,5 @@
-import { getCoord } from '@turf/invariant'
-import { round } from '@turf/helpers'
+const { getCoord } = require('@turf/invariant')
+const { round } = require('@turf/helpers')
 
 /**
  * Finds the angle between 3 points.
@@ -15,7 +15,7 @@ import { round } from '@turf/helpers'
  * osmlinter.findAngle([5, 5], [5, 6], [3, 4])
  * //=45
  */
-export function findAngle (startPoint, midPoint, endPoint, options) {
+function findAngle (startPoint, midPoint, endPoint, options) {
   options = options || {}
   var precision = options.precision || 6
 
@@ -31,4 +31,8 @@ export function findAngle (startPoint, midPoint, endPoint, options) {
   var AC = Math.sqrt(Math.pow(C[0] - A[0], 2) + Math.pow(C[1] - A[1], 2))
   var angle = Math.acos((BC * BC + AB * AB - AC * AC) / (2 * BC * AB)) * (180 / pi)
   return round(angle, precision)
+}
+
+module.exports = {
+  findAngle
 }

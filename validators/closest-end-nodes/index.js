@@ -1,8 +1,8 @@
-import { flattenEach } from '@turf/meta'
-import { getCoords, getType } from '@turf/invariant'
-import { point, featureCollection } from '@turf/helpers'
-var pointToLineDistance = require('@turf/point-to-line-distance')
-var pointOnLine = require('@turf/point-on-line')
+const pointOnLine = require('@turf/point-on-line')
+const { flattenEach } = require('@turf/meta')
+const { getType, getCoords } = require('@turf/invariant')
+const { point, featureCollection } = require('@turf/helpers')
+const pointToLineDistance = require('@turf/point-to-line-distance')
 
 /**
  * Closest End Nodes, this validator detects if a line has ending nodes closer to other lines.
@@ -24,32 +24,32 @@ var pointOnLine = require('@turf/point-on-line')
  * const endNodes = osmlinter.closestEndNodes(lines)
  * //=endNodes
  */
-export default function closestEndNodes (lines, options) {
+module.exports = function closestEndNodes (lines, options) {
   // Optional Paramters
   options = options || {}
-  var maxDistance = (options.maxDistance !== undefined) ? options.maxDistance : 7.5
-  var units = (options.units !== undefined) ? options.units : 'meters'
+  const maxDistance = (options.maxDistance !== undefined) ? options.maxDistance : 7.5
+  const units = (options.units !== undefined) ? options.units : 'meters'
 
   // Validation
   if (!lines) throw new Error('lines is required')
 
   // Iterate over each Start & End nodes
-  var closestEndNodes = []
+  const closestEndNodes = []
   flattenEach(lines, function (line1, featureIndex1, featureSubIndex1) {
     if (getType(line1) !== 'LineString') return null
-    var coords = getCoords(line1)
-    var start = coords[0]
-    var end = coords[coords.length - 1]
+    const coords = getCoords(line1)
+    const start = coords[0]
+    const end = coords[coords.length - 1]
 
     // Iterate over each other lines to see if end nodes are too close
-    flattenEach(lines, function (line2, featureIndex2, featureSubIndex2) {
-      [start, end].forEach(function (endNode) {
+    flattenEach(lines, (line2, featureIndex2, featureSubIndex2) => {
+      [start, end].forEach(endNode => {
         if (featureIndex1 === featureIndex2) return null
-        var distance = pointToLineDistance(endNode, line2, units)
+        const distance = pointToLineDistance(endNode, line2, units)
 
         if (distance !== 0 && maxDistance > distance) {
           // Add results to GeoJSON properties
-          var properties = {
+          const properties = {
             distance: distance,
             featureIndex: featureIndex1,
             closestFeatureIndex: featureIndex2,
