@@ -1,14 +1,13 @@
-const path = require('path')
-const test = require('tape')
-const glob = require('glob')
-const load = require('load-json-file')
-const write = require('write-json-file')
-const circle = require('@turf/circle')
-const truncate = require('@turf/truncate')
-const { featureEach } = require('@turf/meta')
-const { lineString } = require('@turf/helpers')
-const { featureCollection } = require('@turf/helpers')
-const closestEndNodes = require('./')
+import path from 'path'
+import test from 'tape'
+import glob from 'glob'
+import load from 'load-json-file'
+import write from 'write-json-file'
+import circle from '@turf/circle'
+import truncate from '@turf/truncate'
+import { featureEach } from '@turf/meta'
+import { featureCollection, lineString } from '@turf/helpers'
+import closestEndNodes from './'
 
 test('closestEndNodes', t => {
   glob.sync(path.join(__dirname, 'test', 'in', '*.geojson')).forEach(filepath => {

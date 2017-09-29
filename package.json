@@ -1,18 +1,21 @@
 {
   "name": "osmlinter",
   "description": "Advanced OSM linter for node and browsers",
-  "version": "0.3.0",
-  "main": "index.js",
+  "version": "0.3.1",
+  "main": "osmlinter.js",
+  "module": "index.js",
+  "jsnext:main": "index.js",
   "types": "index.d.ts",
   "files": [
     "index.js",
-    "index.d.ts"
+    "index.d.ts",
+    "validators"
   ],
   "scripts": {
     "lint": "standard",
     "docs": "documentation readme index.js --section=API",
-    "test": "tap validators/*/test.js --coverage",
-    "bench": "node bench.js"
+    "pretest": "rollup -c rollup.config.js",
+    "test": "tape -r @std/esm validators/*/test.js --coverage"
   },
   "repository": {
     "type": "git",
@@ -28,22 +31,27 @@
     "@turf/helpers": "5.0.0-alpha",
     "@turf/invariant": "5.0.0-alpha",
     "@turf/meta": "5.0.0-alpha",
-    "@turf/nearest-point-to-line": "*",
     "@turf/point-on-line": "*",
     "@turf/point-to-line-distance": "*"
   },
   "devDependencies": {
+    "@turf/nearest-point-to-line": "*",
+    "@std/esm": "^0.11.0",
     "@turf/circle": "*",
     "@turf/truncate": "*",
     "@types/geojson": "*",
-    "benchmark": "*",
     "documentation": "*",
     "glob": "*",
     "load-json-file": "*",
+    "rollup": "^0.50.0",
     "standard": "*",
     "tap": "*",
     "tape": "*",
     "typescript": "*",
     "write-json-file": "*"
+  },
+  "@std/esm": {
+    "esm": "js",
+    "cjs": true
   }
 }

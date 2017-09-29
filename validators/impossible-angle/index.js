@@ -1,6 +1,6 @@
-const { segmentReduce } = require('@turf/meta')
-const { getCoords } = require('@turf/invariant')
-const { findAngle } = require('../utils')
+import { segmentReduce } from '@turf/meta'
+import { getCoords } from '@turf/invariant'
+import { findAngle } from '../utils/index'
 
 /**
  * Impossible Angle, this validator detects lines with less likely turning angles.
@@ -16,7 +16,7 @@ const { findAngle } = require('../utils')
  * }
  * osmlinter.impossibleAngle(line)
  */
-module.exports = function impossibleAngle (lines, options) {
+export default function impossibleAngle (lines, options) {
   // Optional Paramters
   options = options || {}
   var threshold = (options.threshold !== undefined) ? options.threshold : 10

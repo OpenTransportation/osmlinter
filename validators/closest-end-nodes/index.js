@@ -1,8 +1,8 @@
-const pointOnLine = require('@turf/point-on-line')
-const { flattenEach } = require('@turf/meta')
-const { getType, getCoords } = require('@turf/invariant')
-const { point, featureCollection } = require('@turf/helpers')
-const pointToLineDistance = require('@turf/point-to-line-distance')
+import pointOnLine from '@turf/point-on-line'
+import { flattenEach } from '@turf/meta'
+import { getType, getCoords } from '@turf/invariant'
+import { point, featureCollection } from '@turf/helpers'
+import pointToLineDistance from '@turf/point-to-line-distance'
 
 /**
  * Closest End Nodes, this validator detects if a line has ending nodes closer to other lines.
@@ -24,7 +24,7 @@ const pointToLineDistance = require('@turf/point-to-line-distance')
  * const endNodes = osmlinter.closestEndNodes(lines)
  * //=endNodes
  */
-module.exports = function closestEndNodes (lines, options) {
+export default function closestEndNodes (lines, options) {
   // Optional Paramters
   options = options || {}
   const maxDistance = (options.maxDistance !== undefined) ? options.maxDistance : 7.5
