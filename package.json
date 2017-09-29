@@ -1,14 +1,14 @@
 {
   "name": "osmlinter",
   "description": "Advanced OSM linter for node and browsers",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "main": "osmlinter.js",
   "types": "index.d.ts",
-  "module": "osmlinter.mjs",
-  "jsnext:main": "osmlinter.mjs",
+  "module": "index.js",
+  "jsnext:main": "index.js",
   "files": [
+    "index.js",
     "osmlinter.js",
-    "osmlinter.mjs",
     "osmlinter.min.js"
   ],
   "scripts": {
