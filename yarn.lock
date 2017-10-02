@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@std/esm@^0.11.0":
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/@std/esm/-/esm-0.11.0.tgz#f5562c6723a2eae5d6f95c3b35ff1338c586ae4e"
+"@std/esm@*":
+  version "0.11.1"
+  resolved "https://registry.yarnpkg.com/@std/esm/-/esm-0.11.1.tgz#ec1ddfee283303bccc72fb22c74b9a7df7b78aac"
 
 "@turf/bearing@5.0.0":
   version "5.0.0"
@@ -4230,7 +4230,7 @@ rimraf@2, rimraf@^2.2.8, rimraf@^2.3.3, rimraf@^2.5.1, rimraf@^2.5.4, rimraf@^2.
   dependencies:
     glob "^7.0.5"
 
-rollup@^0.50.0:
+rollup@*:
   version "0.50.0"
   resolved "https://registry.yarnpkg.com/rollup/-/rollup-0.50.0.tgz#4c158f4e780e6cb33ff0dbfc184a52cc58cd5f3b"
 
