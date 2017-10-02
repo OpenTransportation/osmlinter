@@ -10,7 +10,8 @@ type MultiLineString = GeoJSON.MultiLineString
 export function impossibleAngle<T extends LineString>(
     line: GeoJSON.FeatureCollection<T> | GeoJSON.Feature<T> | T,
     options?: {
-        threshold?: number
+        minAngle?: number
+        maxAngle?: number
     }
 ): boolean
 

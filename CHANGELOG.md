@@ -2,6 +2,7 @@
 
 ## 0.4.0 - 2017-10-01
 
+- Replace `threshold` with `maxAngle`
 - Support mixed geojson `closest-end-nodes`
 - Update TurfJS dependencies
 

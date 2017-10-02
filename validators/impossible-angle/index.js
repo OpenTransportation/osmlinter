@@ -7,7 +7,8 @@ import { findAngle } from '../utils/index'
  *
  * @param {FeatureCollection|Feature<LineString|MultiLineString>} lines GeoJSON (Multi)LineString(s)
  * @param {Object} [options] Optional parameters
- * @param {number} [options.threshold=10] Threshold in degrees
+ * @param {number} [options.minAngle=10] Minimum Angle in degrees
+ * @param {number} [options.maxAngle=Infinity] Maximum Angle in degrees
  * @returns {boolean} true/false
  * @example
  * const line = {
@@ -19,7 +20,8 @@ import { findAngle } from '../utils/index'
 export default function impossibleAngle (lines, options) {
   // Optional Paramters
   options = options || {}
-  var threshold = (options.threshold !== undefined) ? options.threshold : 10
+  var maxAngle = options.maxAngle || Infinity
+  var minAngle = options.minAngle || 10
 
   // Validation
   if (!lines) throw new Error('line is required')
@@ -32,7 +34,9 @@ export default function impossibleAngle (lines, options) {
     var endPoint = getCoords(currentSegment)[1]
 
     var angle = findAngle(startPoint, midPoint, endPoint)
-    if (angle < threshold) isImpossible = true
+    console.log('angle', angle, 'minAngle', minAngle, 'maxAngle', maxAngle)
+    if (angle < minAngle) isImpossible = true
+    if (angle > maxAngle) isImpossible = true
     return currentSegment
   })
   return isImpossible

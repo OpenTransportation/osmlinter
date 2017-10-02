@@ -45,7 +45,8 @@ test('impossible-angle -- GeoJSON', t => {
 
   t.false(impossibleAngle(line))
   t.false(impossibleAngle(line.geometry))
-  t.true(impossibleAngle(line.geometry, { threshold: 60 }))
+  t.true(impossibleAngle(line.geometry, { minAngle: 60 }))
+  t.true(impossibleAngle(line.geometry, { maxAngle: 10 }))
   t.end()
 })
 
