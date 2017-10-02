@@ -1,20 +1,20 @@
 {
   "name": "osmlinter",
   "description": "Advanced OSM linter for node and browsers",
-  "version": "0.4.2",
-  "main": "osmlinter.js",
-  "module": "index.js",
-  "jsnext:main": "index.js",
+  "version": "0.4.3",
+  "main": "main",
+  "module": "index",
+  "jsnext:main": "index",
   "types": "index.d.ts",
   "files": [
     "index.js",
     "index.d.ts",
+    "main.js",
     "validators"
   ],
   "scripts": {
-    "lint": "standard",
     "docs": "documentation readme index.js --section=API",
-    "pretest": "rollup -c rollup.config.js",
+    "prepublish": "rollup -c rollup.config.js",
     "test": "tape -r @std/esm validators/*/test.js --coverage"
   },
   "repository": {

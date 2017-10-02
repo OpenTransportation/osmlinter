@@ -2,6 +2,7 @@ dist
 osmlinter.js
 osmlinter.min.js
 osmlinter.mjs
+main.js
 
 .esm-cache
 # Logs
