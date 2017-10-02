@@ -45,7 +45,7 @@ export default function closestEndNodes (lines, options) {
     flattenEach(lines, (line2, featureIndex2, featureSubIndex2) => {
       [start, end].forEach(endNode => {
         if (featureIndex1 === featureIndex2) return null
-        const distance = pointToLineDistance(endNode, line2, units)
+        const distance = pointToLineDistance(endNode, line2, {units: units})
 
         if (distance !== 0 && maxDistance > distance) {
           // Add results to GeoJSON properties
