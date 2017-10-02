@@ -69,15 +69,15 @@
   version "4.7.3"
   resolved "https://registry.yarnpkg.com/@turf/invariant/-/invariant-4.7.3.tgz#538f367d23c113fc849d70c9a524b8563874601d"
 
-"@turf/line-intersect@5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@turf/line-intersect/-/line-intersect-5.0.0.tgz#ed3a4b9c28377b3c8140632c673ffcc9255f1515"
+"@turf/line-intersect@^5.0.3":
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/@turf/line-intersect/-/line-intersect-5.0.3.tgz#a15df3bc99a9cae028532349a4e3a011c1789044"
   dependencies:
     "@turf/helpers" "5.0.0"
     "@turf/invariant" "5.0.0"
     "@turf/line-segment" "5.0.0"
     "@turf/meta" "5.0.0"
-    geojson-rbush "^1.0.1"
+    geojson-rbush "^2.0.1"
 
 "@turf/line-segment@5.0.0":
   version "5.0.0"
@@ -87,11 +87,11 @@
     "@turf/invariant" "5.0.0"
     "@turf/meta" "5.0.0"
 
-"@turf/meta@5.0.0", "@turf/meta@^5.0.0":
+"@turf/meta@*", "@turf/meta@5.0.0", "@turf/meta@^5.0.0":
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/@turf/meta/-/meta-5.0.0.tgz#75b100e9854cd7b2fa63e68561e1298dac09d7b4"
 
-"@turf/meta@^4.6.0", "@turf/meta@^4.7.3":
+"@turf/meta@^4.7.3":
   version "4.7.4"
   resolved "https://registry.yarnpkg.com/@turf/meta/-/meta-4.7.4.tgz#6de2f1e9890b8f64b669e4b47c09b20893063977"
 
@@ -102,16 +102,16 @@
     "@turf/meta" "^4.7.3"
     "@turf/point-to-line-distance" "^4.7.3"
 
-"@turf/point-on-line@^5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@turf/point-on-line/-/point-on-line-5.0.0.tgz#3ab26bd5361adcd368090d9bb480e58f76f1953f"
+"@turf/point-on-line@^5.0.3":
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/@turf/point-on-line/-/point-on-line-5.0.3.tgz#cb7d5f99a03a0d6338f6f8e3d4b3cca56b46bd45"
   dependencies:
     "@turf/bearing" "5.0.0"
     "@turf/destination" "5.0.0"
     "@turf/distance" "5.0.0"
     "@turf/helpers" "5.0.0"
     "@turf/invariant" "5.0.0"
-    "@turf/line-intersect" "5.0.0"
+    "@turf/line-intersect" "^5.0.3"
     "@turf/meta" "5.0.0"
 
 "@turf/point-to-line-distance@^4.7.3":
@@ -2252,12 +2252,11 @@ geodesy@1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/geodesy/-/geodesy-1.1.2.tgz#84cbdf7e7b98907bd3b13b09ae86c65926391a50"
 
-geojson-rbush@^1.0.1:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/geojson-rbush/-/geojson-rbush-1.2.0.tgz#eca3b6a3afb899a453ef82d5e2373092e20d77e5"
+geojson-rbush@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/geojson-rbush/-/geojson-rbush-2.0.1.tgz#3b211decf02a6e2c21fb8c3de59b4de5b61679d9"
   dependencies:
-    "@turf/meta" "^4.6.0"
-    rbush "^2.0.1"
+    "@turf/meta" "*"
 
 get-caller-file@^1.0.1:
   version "1.0.2"
@@ -3837,10 +3836,6 @@ qs@~6.4.0:
   version "6.4.0"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.4.0.tgz#13e26d28ad6b0ffaa91312cd3bf708ed351e7233"
 
-quickselect@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/quickselect/-/quickselect-1.0.0.tgz#02630818f9aae4ecab26f0103f98d061c17c58f3"
-
 randomatic@^1.1.3:
   version "1.1.7"
   resolved "https://registry.yarnpkg.com/randomatic/-/randomatic-1.1.7.tgz#c7abe9cc8b87c0baa876b19fde83fd464797e38c"
@@ -3854,12 +3849,6 @@ raw-body@~1.1.0:
   dependencies:
     bytes "1"
     string_decoder "0.10"
-
-rbush@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/rbush/-/rbush-2.0.1.tgz#4cfaca28c3064bc0ee75431a1b79990e875eefa9"
-  dependencies:
-    quickselect "^1.0.0"
 
 rc@^1.1.7:
   version "1.2.1"

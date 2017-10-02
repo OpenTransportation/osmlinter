@@ -1,7 +1,7 @@
 {
   "name": "osmlinter",
   "description": "Advanced OSM linter for node and browsers",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "main": "osmlinter.js",
   "module": "index.js",
   "jsnext:main": "index.js",
@@ -31,7 +31,7 @@
     "@turf/helpers": "^5.0.0",
     "@turf/invariant": "^5.0.0",
     "@turf/meta": "^5.0.0",
-    "@turf/point-on-line": "^5.0.0",
+    "@turf/point-on-line": "^5.0.3",
     "@turf/point-to-line-distance": "^5.0.0"
   },
   "devDependencies": {
