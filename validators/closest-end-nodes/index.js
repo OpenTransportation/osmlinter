@@ -43,6 +43,8 @@ export default function closestEndNodes (lines, options) {
 
     // Iterate over each other lines to see if end nodes are too close
     flattenEach(lines, (line2, featureIndex2, featureSubIndex2) => {
+      if (getType(line1) !== 'LineString') return null
+      if (getType(line2) !== 'LineString') return null;
       [start, end].forEach(endNode => {
         if (featureIndex1 === featureIndex2) return null
         const distance = pointToLineDistance(endNode, line2, {units: units})
