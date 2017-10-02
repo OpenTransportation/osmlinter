@@ -34,7 +34,6 @@ export default function impossibleAngle (lines, options) {
     var endPoint = getCoords(currentSegment)[1]
 
     var angle = findAngle(startPoint, midPoint, endPoint)
-    console.log('angle', angle, 'minAngle', minAngle, 'maxAngle', maxAngle)
     if (angle < minAngle) isImpossible = true
     if (angle > maxAngle) isImpossible = true
     return currentSegment

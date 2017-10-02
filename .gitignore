@@ -4,6 +4,7 @@ osmlinter.min.js
 osmlinter.mjs
 main.js
 
+types.js
 .esm-cache
 # Logs
 logs

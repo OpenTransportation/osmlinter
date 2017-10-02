@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.0 - 2017-10-02
+
+- Improve Typescript defintions
+
 ## 0.4.0 - 2017-10-01
 
 - Replace `threshold` with `maxAngle`
