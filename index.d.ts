@@ -1,2 +1,2 @@
-export {default as closestEndNodes} from './validators/closest-end-nodes'
-export {default as impossibleAngle} from './validators/impossible-angle'
+export { default as closestEndNodes, ClosestEndNodes, ClosestEndNodesPoint, ClosestEndNodesProps } from './validators/closest-end-nodes'
+export { default as impossibleAngle } from './validators/impossible-angle'
