@@ -10,12 +10,12 @@
     "index.js",
     "index.d.ts",
     "main.js",
-    "validators"
+    "src"
   ],
   "scripts": {
     "docs": "documentation readme index.js --section=API",
     "prepublish": "rollup -c rollup.config.js",
-    "test": "tape -r @std/esm validators/*/test.js --coverage"
+    "test": "tape -r @std/esm test/*.test.js"
   },
   "repository": {
     "type": "git",
@@ -28,11 +28,11 @@
   },
   "homepage": "https://github.com/OpenTransportation/osmlinter",
   "dependencies": {
-    "@turf/helpers": "^5.0.0",
-    "@turf/invariant": "^5.0.0",
-    "@turf/meta": "^5.0.0",
-    "@turf/point-on-line": "^5.0.3",
-    "@turf/point-to-line-distance": "^5.0.0"
+    "@turf/helpers": "*",
+    "@turf/invariant": "*",
+    "@turf/meta": "*",
+    "@turf/point-on-line": "*",
+    "@turf/point-to-line-distance": "*"
   },
   "devDependencies": {
     "@std/esm": "*",

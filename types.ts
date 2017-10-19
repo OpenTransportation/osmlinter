@@ -20,3 +20,6 @@ osmlinter.closestEndNodes(line, {units: 'meters', maxDistance: 100})
 osmlinter.impossibleAngle(line)
 osmlinter.impossibleAngle(line, {minAngle: 10})
 osmlinter.impossibleAngle(line, {minAngle: 10, maxAngle: 40})
+
+// Utils
+osmlinter.findAngle([10, 10], [20, 20], [30, 40])

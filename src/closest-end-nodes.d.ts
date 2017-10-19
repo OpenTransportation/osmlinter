@@ -1,10 +1,4 @@
-import {
-    Feature,
-    FeatureCollection,
-    Point,
-    MultiLineString,
-    LineString
-} from '@turf/helpers'
+import { Feature, FeatureCollection, Point, MultiLineString, LineString } from '@turf/helpers'
 
 export interface ClosestEndNodes {
     type: 'FeatureCollection';
@@ -12,10 +6,10 @@ export interface ClosestEndNodes {
 }
 
 export interface ClosestEndNodesPoint extends Feature<Point> {
-    properties: ClosestEndNodesProps
+    properties: ClosestEndNodesProperties
 }
 
-export interface ClosestEndNodesProps {
+export interface ClosestEndNodesProperties {
     distance: number;
     featureIndex: number;
     closestFeatureIndex: number;

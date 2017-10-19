@@ -6,7 +6,7 @@ import write from 'write-json-file'
 import truncate from '@turf/truncate'
 import { featureEach } from '@turf/meta'
 import { lineString, featureCollection } from '@turf/helpers'
-import impossibleAngle from './'
+import { impossibleAngle } from '../'
 
 test('impossible-angle', t => {
   glob.sync(path.join(__dirname, 'test', 'in', '*.geojson')).forEach(filepath => {
