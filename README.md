@@ -71,7 +71,8 @@ Impossible Angle, this validator detects lines with less likely turning angles.
 
 -   `lines` **(FeatureCollection | Feature&lt;(LineString | MultiLineString)>)** GeoJSON (Multi)LineString(s)
 -   `options` **[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)?** Optional parameters
-    -   `options.threshold` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** Threshold in degrees (optional, default `10`)
+    -   `options.minAngle` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** Minimum Angle in degrees (optional, default `10`)
+    -   `options.maxAngle` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** Maximum Angle in degrees (optional, default `Infinity`)
 
 **Examples**
 
