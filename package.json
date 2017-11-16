@@ -14,7 +14,7 @@
   ],
   "scripts": {
     "docs": "documentation readme index.js --section=API",
-    "prepublish": "rollup -c rollup.config.js",
+    "pretest": "rollup -c rollup.config.js",
     "test": "tape -r @std/esm test/*.test.js"
   },
   "repository": {
@@ -28,11 +28,14 @@
   },
   "homepage": "https://github.com/OpenTransportation/osmlinter",
   "dependencies": {
+    "@turf/area": "^5.0.4",
     "@turf/helpers": "*",
     "@turf/invariant": "*",
+    "@turf/length": "^5.0.4",
     "@turf/meta": "*",
     "@turf/point-on-line": "*",
-    "@turf/point-to-line-distance": "*"
+    "@turf/point-to-line-distance": "*",
+    "deep-equal": "^1.0.1"
   },
   "devDependencies": {
     "@std/esm": "*",

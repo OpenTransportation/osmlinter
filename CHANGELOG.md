@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.6.0 - 2017-11-16
+
+- Add `isBuilding`
+
 ## 0.5.0 - 2017-10-02
 
 - Improve Typescript defintions
