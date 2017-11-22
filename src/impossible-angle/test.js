@@ -19,7 +19,7 @@ test('impossible-angle', t => {
       results.features.push(feature)
     })
     // Add Results
-    truncate(results, 6, 2, true)
+    truncate(results, {precision: 6, coordinates: 2, mutate: true})
     if (process.env.REGEN) write.sync(outpath, results)
     t.deepEqual(load.sync(outpath), results)
   })

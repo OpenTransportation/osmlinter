@@ -20,12 +20,12 @@ test('closestEndNodes', t => {
     featureEach(endNodes, endNode => {
       const distance = endNode.properties.distance
       const featureIndex = endNode.properties.featureIndex
-      results.features.push(circle(endNode, distance, null, 'meters', {fill: '#800000', stroke: '#800000'}))
+      results.features.push(circle(endNode, distance, {units: 'meters', properties: {fill: '#800000', stroke: '#800000'}}))
       geojson.features[featureIndex].properties = {stroke: '#F00', 'stroke-width': 5}
     })
     // Add existing data
     featureEach(geojson, feature => results.features.push(feature))
-    truncate(results, 6, 2, true)
+    truncate(results, {precision: 6, coordinates: 2, mutate: true})
     if (process.env.REGEN) write.sync(outpath, results)
     t.deepEqual(results, load.sync(outpath))
   })
