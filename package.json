@@ -1,7 +1,7 @@
 {
   "name": "osmlinter",
   "description": "Advanced OSM linter for node and browsers",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "main": "main",
   "module": "index",
   "jsnext:main": "index",
@@ -15,7 +15,7 @@
   "scripts": {
     "docs": "documentation readme index.js --section=API",
     "pretest": "rollup -c rollup.config.js",
-    "test": "tape -r @std/esm test/*.test.js"
+    "test": "tape -r @std/esm src/**/test.js"
   },
   "repository": {
     "type": "git",

@@ -2,7 +2,7 @@ import test from 'tape'
 import path from 'path'
 import glob from 'glob'
 import load from 'load-json-file'
-import { isBuilding } from './'
+import isBuilding from './'
 
 test('is-building -- boolean', t => {
   // True

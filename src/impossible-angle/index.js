@@ -1,6 +1,6 @@
 import { segmentReduce } from '@turf/meta'
 import { getCoords } from '@turf/invariant'
-import { findAngle } from '../utils'
+import { findAngle } from '../utils/index'
 
 /**
  * Impossible Angle, this validator detects lines with less likely turning angles.
