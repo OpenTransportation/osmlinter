@@ -6,7 +6,7 @@ import write from 'write-json-file'
 import truncate from '@turf/truncate'
 import { featureEach } from '@turf/meta'
 import { lineString, featureCollection } from '@turf/helpers'
-import { impossibleAngle } from '../'
+import impossibleAngle from './'
 
 test('impossible-angle', t => {
   glob.sync(path.join(__dirname, 'test', 'in', '*.geojson')).forEach(filepath => {
@@ -28,12 +28,12 @@ test('impossible-angle', t => {
 
 test('impossible-angle -- boolean', t => {
   // True
-  glob.sync(path.join(__dirname, 'impossible-angle', 'true', '*.geojson')).forEach(filepath => {
+  glob.sync(path.join(__dirname, 'test', 'true', '*.geojson')).forEach(filepath => {
     const geojson = load.sync(filepath)
     t.true(impossibleAngle(geojson, geojson.properties))
   })
   // False
-  glob.sync(path.join(__dirname, 'impossible-angle', 'false', '*.geojson')).forEach(filepath => {
+  glob.sync(path.join(__dirname, 'test', 'false', '*.geojson')).forEach(filepath => {
     const geojson = load.sync(filepath)
     t.false(impossibleAngle(geojson, geojson.properties))
   })

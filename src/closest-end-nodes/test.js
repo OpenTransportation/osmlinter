@@ -7,7 +7,7 @@ import circle from '@turf/circle'
 import truncate from '@turf/truncate'
 import { featureEach } from '@turf/meta'
 import { featureCollection, lineString } from '@turf/helpers'
-import { closestEndNodes } from '../'
+import closestEndNodes from './'
 
 test('closestEndNodes', t => {
   glob.sync(path.join(__dirname, 'test', 'in', '*.geojson')).forEach(filepath => {
