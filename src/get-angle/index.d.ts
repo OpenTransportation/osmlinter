@@ -6,8 +6,5 @@ import { Coord } from '@turf/helpers'
 export default function (
     startPoint: Coord,
     midPoint: Coord,
-    endPoint: Coord,
-    options?: {
-        precision?: number
-    }
+    endPoint: Coord
 ): number

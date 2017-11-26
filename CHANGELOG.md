@@ -2,6 +2,7 @@
 
 ## 0.7.0 - 2017-11-25
 
+- Drop precision from `getAngle`
 - Add `totalNodes` & `getAngle` to library
 
 ## 0.6.0 - 2017-11-16
