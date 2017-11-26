@@ -1,7 +1,7 @@
 {
   "name": "osmlinter",
   "description": "Advanced OSM linter for node and browsers",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "main": "main",
   "module": "index",
   "jsnext:main": "index",
