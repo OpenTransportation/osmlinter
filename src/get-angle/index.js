@@ -4,7 +4,6 @@ import { round } from '@turf/helpers'
 /**
  * Finds the angle between 3 points.
  *
- * @private
  * @param {number[]} startPoint Start Point Coordiantes
  * @param {number[]} midPoint Mid Point Coordinates
  * @param {number[]} endPoint End Point Coordinates
@@ -12,10 +11,10 @@ import { round } from '@turf/helpers'
  * @param {number} [options.precision] Number of precison
  * @return {number} angle
  * @example
- * osmlinter.findAngle([5, 5], [5, 6], [3, 4])
+ * osmlinter.getAngle([5, 5], [5, 6], [3, 4])
  * //=45
  */
-export function findAngle (startPoint, midPoint, endPoint, options) {
+export default function (startPoint, midPoint, endPoint, options) {
   options = options || {}
   var precision = options.precision || 6
 

@@ -3,7 +3,7 @@ import { Coord } from '@turf/helpers'
 /**
  * Finds the angle between 3 points.
  */
-export function findAngle(
+export default function (
     startPoint: Coord,
     midPoint: Coord,
     endPoint: Coord,

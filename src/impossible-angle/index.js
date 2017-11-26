@@ -1,6 +1,6 @@
 import { segmentReduce } from '@turf/meta'
 import { getCoords } from '@turf/invariant'
-import { findAngle } from '../utils/index'
+import getAngle from '../get-angle/index'
 
 /**
  * Impossible Angle, this validator detects lines with less likely turning angles.
@@ -33,7 +33,7 @@ export default function impossibleAngle (lines, options) {
     var midPoint = getCoords(currentSegment)[0]
     var endPoint = getCoords(currentSegment)[1]
 
-    var angle = findAngle(startPoint, midPoint, endPoint)
+    var angle = getAngle(startPoint, midPoint, endPoint)
     if (angle < minAngle) isImpossible = true
     if (angle > maxAngle) isImpossible = true
     return currentSegment

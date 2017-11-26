@@ -1,5 +1,3 @@
-import area from '@turf/area'
-import length from '@turf/length'
 import { getGeom } from '@turf/invariant'
 
 /**

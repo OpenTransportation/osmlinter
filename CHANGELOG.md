@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.7.0 - 2017-11-25
+
+- Add `totalNodes` & `getAngle` to library
+
 ## 0.6.0 - 2017-11-16
 
 - Add `isBuilding`
