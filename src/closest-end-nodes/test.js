@@ -10,7 +10,7 @@ import { featureCollection, lineString } from '@turf/helpers'
 import closestEndNodes from './'
 
 test('closestEndNodes', t => {
-  glob.sync(path.join(__dirname, 'test', 'in', '*.geojson')).forEach(filepath => {
+  glob.sync(path.join(__dirname, 'test', 'in', '*.json')).forEach(filepath => {
     const outpath = filepath.replace(path.join('test', 'in'), path.join('test', 'out'))
     const geojson = load.sync(filepath)
     const results = featureCollection([])
