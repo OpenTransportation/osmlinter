@@ -1,9 +1,9 @@
 import { Feature, LineString, MultiLineString, Polygon, MultiPolygon } from '@turf/helpers'
 
 /**
- * Is Building, detects if geometry is highly likely to be a building
+ * Detects if geometry is highly likely to be a building
  */
-export default function isBuilding<T extends LineString | MultiLineString | Polygon | MultiPolygon>(
-    geojson: Feature<T> | T,
+export default function isBuilding<G extends LineString | MultiLineString | Polygon | MultiPolygon>(
+    geojson: Feature<G> | G,
     options?: {}
 ): boolean

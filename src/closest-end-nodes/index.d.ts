@@ -1,13 +1,4 @@
-import { Feature, FeatureCollection, Point, MultiLineString, LineString } from '@turf/helpers'
-
-export interface ClosestEndNodes {
-    type: 'FeatureCollection';
-    features: ClosestEndNodesPoint[]
-}
-
-export interface ClosestEndNodesPoint extends Feature<Point> {
-    properties: ClosestEndNodesProperties
-}
+import { Feature, Properties, FeatureCollection, Point, MultiLineString, LineString } from '@turf/helpers'
 
 export interface ClosestEndNodesProperties {
     distance: number;
@@ -22,10 +13,10 @@ export interface ClosestEndNodesProperties {
  *
  * JSOM Linter (Way end node near other highway)
  */
-export default function closestEndNodes<T extends LineString | MultiLineString>(
-    lines: FeatureCollection<T> | Feature<T> | T,
+export default function closestEndNodes<G extends LineString | MultiLineString, P = Properties>(
+    lines: FeatureCollection<G, P> | Feature<G, P> | G,
     options?: {
         maxDistance?: number
         units?: string
     }
-): ClosestEndNodes
+): FeatureCollection<G, P>

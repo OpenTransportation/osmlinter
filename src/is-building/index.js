@@ -1,7 +1,7 @@
 import { getGeom } from '@turf/invariant'
 
 /**
- * Is Building, detects if geometry is highly likely to be a building
+ * Detects if geometry is highly likely to be a building
  *
  * @param {Feature<LineString|MultiLineString|Polygon|MultiPolygon>} geojson LineString(s) or Polygons(s)
  * @param {Object} [options={}] Optional parameters
@@ -12,6 +12,7 @@ import { getGeom } from '@turf/invariant'
  *   coordinates: [[5, 5], [5, 6], [3, 4]]
  * }
  * osmlinter.isBuilding(line)
+ * //=true/false
  */
 export default function isBuilding (geojson, options) {
   // Optional Paramters
