@@ -1,47 +1,49 @@
-import { getGeom } from '@turf/invariant'
+import area from '@turf/area'
+import { getCoords, getType } from '@turf/invariant'
+import { polygon, multiPolygon, isObject, isNumber } from '@turf/helpers'
+import isLineClosed from '../is-line-closed/index'
 
 /**
  * Detects if geometry is highly likely to be a building
  *
  * @param {Feature<LineString|MultiLineString|Polygon|MultiPolygon>} geojson LineString(s) or Polygons(s)
  * @param {Object} [options={}] Optional parameters
+ * @param {number} [options.minArea=0] Minimum area in square meters
+ * @param {number} [options.maxArea=40000] Maximum area in square meters
  * @returns {boolean} true/false
  * @example
- * const line = {
- *   type: 'LineString',
- *   coordinates: [[5, 5], [5, 6], [3, 4]]
- * }
+ * const line = turf.lineString([[5, 5], [5, 6], [3, 4], [4, 4] [5, 5]])
+ *
  * osmlinter.isBuilding(line)
  * //=true/false
  */
 export default function isBuilding (geojson, options) {
-  // Optional Paramters
+  // Optional Parameters
   options = options || {}
+  if (!isObject(options)) throw new Error('options is invalid')
+  const minArea = options.minArea || 0
+  const maxArea = options.maxArea || 40000
 
   // Validation
   if (!geojson) throw new Error('geojson is required')
+  if (!isNumber(minArea)) throw new Error('minArea must be a number')
+  if (!isNumber(maxArea)) throw new Error('maxArea must be a number')
 
-  // Normalize
-  const geom = getGeom(geojson)
-  const type = geom.type
-  const coords = geom.coordinates
+  // Main
+  // Riverbanks must be a closed LineString
+  if (!isLineClosed(geojson)) return false
+  const coords = getCoords(geojson)
 
-  switch (type) {
-    case 'Polygon':
-      return true
+  // Convert LineString to Polygon to calculate area
+  switch (getType(geojson)) {
     case 'LineString':
-      // Detects if first coordinate is the same as the last coordinate
-      const first = coords[0]
-      const last = coords[coords.length - 1]
-      const x1 = first[0]
-      const y1 = first[1]
-      const x2 = last[0]
-      const y2 = last[1]
-      if (x1 === x2 && y1 === y2) return true
-      return false
-    case 'MultiPolygon':
+      geojson = polygon([coords])
+      break
     case 'MultiLineString':
-      throw new Error('not implemented')
+      geojson = multiPolygon([coords])
+      break
+    default:
   }
-  return true
+  const areaMeters = area(geojson)
+  return areaMeters < maxArea && areaMeters > minArea
 }
